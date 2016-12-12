@@ -2,6 +2,7 @@
 
 /* Services */
 
+// angular.module 函数创建模块
 var phonecatServices = angular.module('phonecatServices', ['ngResource']);
 
 phonecatServices.factory('Phone', ['$resource',

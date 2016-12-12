@@ -16,6 +16,7 @@ phonecatApp.config(['$routeProvider',
         templateUrl: 'partials/phone-list.html',
         controller: 'PhoneListCtrl'
       }).
+        //path可以包含以冒号开始的命名组（:name）。匹配到下一个斜杠为止的所有字符，并在路由匹配时以给定的名字存储到$routeParams中
       when('/phones/:phoneId', {
         templateUrl: 'partials/phone-detail.html',
         controller: 'PhoneDetailCtrl'
@@ -24,3 +25,5 @@ phonecatApp.config(['$routeProvider',
         redirectTo: '/phones'
       });
   }]);
+
+

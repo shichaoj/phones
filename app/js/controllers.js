@@ -20,6 +20,7 @@ path可以包含可选的命名组，包含一个问号（:name?）
 
 phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', 'Phone',
   function($scope, $routeParams, Phone) {
+  //服务$routeParams保存了地址栏中的参数，例如{id , name}
     $scope.phone = Phone.get({phoneId: $routeParams.phoneId}, function(phone) {
       $scope.mainImageUrl = phone.images[0];
     });
